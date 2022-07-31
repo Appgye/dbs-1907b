@@ -36,7 +36,7 @@ def index():
         r1 = model1.predict([[rates]])
         model2 = joblib.load("regression")
         r2 = model2.predict([[rates]])
-        return(render_template("index.html", result1 = r1, result2 = r1))
+        return(render_template("index.html", result1 = r1, result2 = r2))
     else:
         return(render_template("index.html", result1 = "WAITING", result2 = "WAITING"))
 
